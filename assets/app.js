@@ -4,18 +4,22 @@ var API_KEY = "YjMawClttmBnYiW3mWkkZVDiwISuNBet" //variable to store API key
 var limit = 10; //limits the response to ten gifs to display
 
 //on page load, loop through array
-// $(document).ready(function(){
+$(document).ready(function(){
 
-// //create a button for each topic in the array
-// $.each(topics, function(index, value) {
-// var newBtn = 
-// })
+//create a button for each topic in the array
+for (var i=0; i < topics.length; i++){
+var newBtn = $("<button>");
+newBtn.attr("id", "topicButton");
+newBtn.text(topics[i]);
+$("#button-div").append(newBtn);
+}
+});
+
 //when one of theses buttons is clicked 
-
     //put that button into a variable that will be used in the urlQuery
     //run urlquery function
     //display 10 results 
-// })
+
 //function for giphy api url
 function queryURL () {
     var baseURL = 'https://api.giphy.com/v1/gifs/search?';
