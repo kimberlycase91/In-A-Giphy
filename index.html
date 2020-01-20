@@ -5,22 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <div id="button-div"></div>
-    <form id="add-item">
-        <label for="item-input">Don't see your emotion?</label>
-        <br>
-        <input type="text" id="item-input">
-        <br>
 
-        <!-- Button triggers new movie to be added -->
-        <input id="add-item" type="submit" value="Add feels">
-    </form>
-    <div class="resultsContainer"></div>
+    <div class="jumbotron">
+        <h1 class="display-4">How are you feeling?</h1>
+        <hr class="my-4">
+    </div>
+
+    <div class="container" id="button-div"></div>
+    <div class="container" id = "add-div">
+        <form id="add-item">
+            <label for="item-input">Don't see your emotion?</label>
+            <br>
+            <input type="text" id="item-input">
+            <br>
+
+            <!-- Button triggers new movie to be added -->
+            <input class="btn btn-secondary" id="add-item" type="submit" value="Add feels">
+        </form>
+    </div>
+    <div class="resultsContainer" class="container"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/app.js"></script>
 </body>

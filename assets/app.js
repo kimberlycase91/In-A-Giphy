@@ -12,8 +12,9 @@ $(document).ready(function () {
 
     for (var i = 0; i < topics.length; i++) {
         var newBtn = $("<button>");
-        newBtn.addClass("topicButton");
+        newBtn.addClass("topicButton btn btn-secondary");
         newBtn.attr("data-name", topics[i])
+        newBtn.attr("id", "button")
         newBtn.text(topics[i]);
         $("#button-div").append(newBtn);
     }}
@@ -24,7 +25,6 @@ $(document).on("click", ".topicButton", function () {
     //put that button into a variable that will be used in the urlQuery
     var input = $(this).attr("data-name");
     topic = input;
-    console.log(topic);
     //run urlquery function
     $.ajax({
         url: queryURL(),
@@ -87,11 +87,9 @@ $("#add-item").on("submit", function (event) {
     renderButtons();
 });
 
-console.log(queryURL(topic="happy"))
 
 //when a gif is clicked on
 $(document).on("click", "#gif", function() {
-    console.log($(this));
 
     // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
     var state = $(this).attr("data-state");
