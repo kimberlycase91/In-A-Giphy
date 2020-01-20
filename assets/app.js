@@ -1,4 +1,4 @@
-var topics = ["happy", "sad", "angry", "tired", "hungry"];  //array of topics
+var topics = ["happy", "sad", "angry", "tired", "hungry", "serious", "sorry", "lazy", "loved", "magical"];  //array of topics
 var limit = 10; //limits the response to ten gifs to display
 
 //on page load, run renderButtons function
